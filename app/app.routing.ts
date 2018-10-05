@@ -5,7 +5,7 @@ import { LoginScreenComponent } from './main/login-screen/login-screen.component
 import { AppComponent } from './app.component';
 
 const APP_ROUTES: Routes = [
-  {path: '', component: AppComponent },
+  {path: '*', component: LoginScreenComponent },
   {path: 'login', component: LoginScreenComponent },
 ]
 

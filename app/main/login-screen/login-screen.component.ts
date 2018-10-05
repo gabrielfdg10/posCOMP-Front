@@ -15,7 +15,6 @@ export class LoginScreenComponent implements OnInit {
 
   ngOnInit() {
     this.color = 'primary';
-
   }
   logIn(){
     this.httpService.getLogInUser(this.username, this.password).subscribe(
