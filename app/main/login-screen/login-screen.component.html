@@ -1,0 +1,23 @@
+<div class="login-screen">
+  <div class="login-form-field">
+    <div class="welcome-label">
+      <span>
+        Bem-vindo de volta!
+      </span>
+    </div>
+    <div class="login-form">
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Nome de usuário" [(ngModel)]="username" value="">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Senha" type="password" [(ngModel)]="password" value="">
+      </mat-form-field>
+      <div class="button-row">
+        <button mat-stroked-button>Cadastrar</button>
+        <button mat-stroked-button (click)="logIn()">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>
