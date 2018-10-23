@@ -1,0 +1,23 @@
+<div class="register">
+  <div class="panel fade-in">
+    <h3>Faça parte da nossa comunidade!</h3>
+
+    <div class="register-form">
+      <mat-form-field *ngFor="let item of register_fields">
+        <span class="input-label">
+          {{ item.label }}
+        </span>
+        <input *ngIf="item.type === 'input'" [type]="item.inputType" class="half-width" matInput [(ngModel)]="regObject[item.key]">
+        <mat-select *ngIf="item.type === 'select'">
+          <mat-option *ngFor="let selectItem of item.options" [value]="selectItem">
+            {{selectItem}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="button-row">
+        <button mat-raised-button>PROSSEGUIR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

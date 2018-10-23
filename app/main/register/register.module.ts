@@ -1,29 +1,32 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginScreenComponent } from './login-screen.component';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
-import { HttpService } from '../../services/http.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register.component';
+import { HttpService } from 'src/app/services/http.service';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     MatButtonModule,
+    MatFormFieldModule,
     MatInputModule,
-    HttpClientModule,
-    RouterModule
+    MatSelectModule,
+    HttpClientModule
   ],
   declarations: [
-    LoginScreenComponent,
+    RegisterComponent
   ],
   exports: [
-    LoginScreenComponent
+    RegisterComponent,
   ],
   providers: [
     HttpService
   ]
 })
-export class LoginScreenModule { }
+export class RegisterModule { }

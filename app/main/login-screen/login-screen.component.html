@@ -1,7 +1,6 @@
 <div class="bg">
-
   <div class="login-screen">
-    <div class="login-form-field">
+    <div class="login-form-field fade-in" >
       <div class="welcome-label">
         <span>
           Bem-vindo de volta!
@@ -10,14 +9,16 @@
       <div class="login-form">
 
         <mat-form-field class="full-width">
-          <input matInput placeholder="Nome de usuário" [(ngModel)]="username" value="">
+          <span class="input-label"> Nome de usuário*</span>
+          <input matInput [(ngModel)]="username" value="">
         </mat-form-field>
 
         <mat-form-field class="full-width">
-          <input matInput placeholder="Senha" type="password" [(ngModel)]="password" value="">
+          <span class="input-label"> Senha*</span>
+          <input matInput type="password" [(ngModel)]="password" value="">
         </mat-form-field>
         <div class="button-row">
-          <button mat-stroked-button>Cadastrar</button>
+          Novo por aqui? <a routerLink="/register" routerLinkActive="active">Cadastrar</a>
           <button mat-stroked-button (click)="logIn()">Entrar</button>
         </div>
       </div>

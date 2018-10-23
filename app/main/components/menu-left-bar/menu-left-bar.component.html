@@ -1,0 +1,7 @@
+<div class="menu-left-bar">
+  <div class="menu-left">
+    <div *ngFor="let item of menuItens" class="menu-left-item" [routerLink]="item.route">
+      <span> <i class="material-icons"> {{ item.icon }} </i> {{ item.title}} </span>
+    </div>
+  </div>
+</div>

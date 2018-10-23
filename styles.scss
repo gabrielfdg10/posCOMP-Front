@@ -1,4 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  font-family: "Titillium Web", sans-serif !important;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
+.fw{
+  display: table;
+  width: 100%;
+}
+
+
+.w2{
+  display: table-cell;
+  width: 50%;
+}
+
+.w3{
+  display: table-cell;
+  width: 33.33333%;
+}
+
+.w4{
+  display: table-cell;
+  width: 25%;
+}
+
+.w5{
+  display: table-cell;
+  width: 20%;
+}
+
+.w6{
+  display: table-cell;
+  width: 16.6666%;
+}
+
+.material-icons{
+  font-family: 'Material Icons' !important;
+}
+
+html, body { height: 100%; margin: 0; padding: 0;}
+
+.fade-in{
+  animation: fadeIn 1s;
+}
+
+.fade-out{
+  animation: fadeOut 1s;
+}
+
+input.mat-input-element {
+  font-size: 12px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

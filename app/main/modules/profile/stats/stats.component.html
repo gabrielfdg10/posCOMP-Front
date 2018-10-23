@@ -1,0 +1,99 @@
+<div class="stats fade-in">
+  <!-- Graficos -->
+  <div class="chart-area">
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="../../../../../assets/img/icons/full.png" style="width: 24px; padding-right: 15px;"> TOTAL DE
+          QUESTÕES
+        </ng-template>
+        <app-pie-chart [pieChartLabels]="pieChartLabels[0]" [pieChartData]="pieChartData[0]"></app-pie-chart>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="../../../../../assets/img/icons/correct.png" style="width: 24px; padding-right: 15px;"> ACERTOS
+        </ng-template>
+        <app-pie-chart [pieChartLabels]="pieChartLabels[0]" [pieChartData]="pieChartData[1]"></app-pie-chart>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="../../../../../assets/img/icons/performance.png" style="width: 24px; padding-right: 15px;"> DESEMPENHO GERAL
+        </ng-template>
+        <app-bar-chart> </app-bar-chart>
+      </mat-tab>
+    </mat-tab-group>
+    <div class="chart">
+
+    </div>
+  </div>
+
+  <!-- Estatísticas -->
+  <div class="stats-area">
+    <div class="title">
+    </div>
+    <div class="fw math">
+      <div class="description">
+        <div class="img">
+          <img src="../../../../../assets/img/icons/math.png" alt="">
+        </div>
+        <span class="label"> MATEMÁTICA</span>
+      </div>
+      <div class="data">
+        <div class="item">
+          <div class="label"> RESOLVIDAS: </div>
+          <div class="value"> 100 </div>
+        </div>
+        <div class="item">
+          <div class="label"> CORRETAS: </div>
+          <div class="value"> 51 </div>
+        </div>
+        <div class="item">
+          <div class="label"> ACURÁCIA: </div>
+          <div class="value"> 51% </div>
+        </div>
+      </div>
+    </div>
+    <div class="fw tech">
+      <div class="description">
+        <div class="img">
+          <img src="../../../../../assets/img/icons/tech.png" alt="">
+        </div> <span class="label"> TECNOLOGIAS</span>
+      </div>
+      <div class="data">
+        <div class="item">
+          <div class="label"> RESOLVIDAS: </div>
+          <div class="value"> 84</div>
+        </div>
+        <div class="item">
+          <div class="label"> CORRETAS: </div>
+          <div class="value"> 32</div>
+        </div>
+        <div class="item">
+          <div class="label"> ACURÁCIA: </div>
+          <div class="value"> 38%</div>
+        </div>
+      </div>
+    </div>
+    <div class="fw fund">
+      <div class="description">
+        <div class="img">
+          <img src="../../../../../assets/img/icons/fund.png" alt="">
+        </div> <span class="label"> FUNDAMENTOS</span>
+      </div>
+      <div class="data">
+        <div class="item">
+          <div class="label"> RESOLVIDAS: </div>
+          <div class="value"> 63</div>
+        </div>
+        <div class="item">
+          <div class="label"> CORRETAS: </div>
+          <div class="value"> 42</div>
+        </div>
+        <div class="item">
+          <div class="label"> ACURÁCIA: </div>
+          <div class="value"> 66%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
