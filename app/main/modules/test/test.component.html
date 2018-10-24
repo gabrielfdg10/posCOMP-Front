@@ -1,3 +1,59 @@
-<p>
-  test works!
-</p>
+<div class="test fade-in">
+  <!-- CRIAÇÃO DO TESTE -->
+  <div class="create-test fade-in" *ngIf="!canMakeTest">
+    <div class="label">Olá {{ username }}, como você quer estudar hoje? </div>
+
+    <div class="w2">
+      <mat-form-field class="select">
+        <mat-select placeholder="Tipo de Simulado" (selectionChange)="changedTestType($event)" mat-select [(value)]="testConfig.type">
+          <mat-option *ngFor="let type of testTypes" [value]="type">
+            {{type}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="testConfig.type === 'Simulado Personalizado'" class="w2 fade-in">
+      <div class="w3" style="padding-left: 0">
+        <mat-form-field>
+          <input type="number" matInput placeholder="Questões de matemática (0-10)" [(ngModel)]="testConfig.math">
+        </mat-form-field>
+      </div>
+      <div class="w3" style="padding-left: 5%">
+        <mat-form-field class="example-full-width">
+          <input type="number" matInput placeholder="Questões de Tecnologias (0-10)" [(ngModel)]="testConfig.tech">
+        </mat-form-field>
+      </div>
+      <div class="w3" style="padding-left: 5%">
+        <mat-form-field class="example-full-width">
+          <input type="number" matInput placeholder="Questões de Fundamentos (0-10)" [(ngModel)]="testConfig.fund">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="button-row">
+      <button mat-raised-button class="clear" (click)="clearChoices()"> <img src="../../../../assets/img/icons/trash-can.png"
+          alt=""> Limpar escolhas</button>
+      <button mat-raised-button class="confirm" (click)="validateForm()"><img src="../../../../assets/img/icons/correct.png"
+          alt=""> Tudo certo. Começar!</button>
+    </div>
+  </div>
+
+  <!-- TESTE -->
+  <div class="do-test fade-in" *ngIf="canMakeTest">
+    <div class="test-info">
+      <div class="progress-bar">
+        <mat-progress-bar mode="determinate" [value]="testProgress"></mat-progress-bar>
+        <div class="progress-text"> você já respondeu {{ answered }} de {{ nQuestions }} questões</div>
+        <div class="current-question"> Questão {{ questionNumber }} - Ano {{ questionYear }} - {{ questionClass}}</div>
+      </div>
+    </div>
+    <div class="question-area fade-in">
+      <app-question [question]="questionToGo"></app-question>
+      <div class="button-row">
+          <button mat-raised-button (click)="skipQuestion()" class="clear">Pular Questão <img src="../../../../assets/img/icons/skip.png" alt=""> </button>
+          <button mat-raised-button (click)="confirmAnswer()" class="confirm">Confirmar Resposta <img src="../../../../assets/img/icons/correct.png" alt=""></button>
+        </div>
+    </div>
+  </div>
+
+</div>

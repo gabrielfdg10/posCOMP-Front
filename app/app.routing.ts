@@ -10,6 +10,7 @@ import { ProfileComponent } from './main/modules/profile/profile.component';
 import { TestComponent } from './main/modules/test/test.component';
 import { HistoryComponent } from './main/modules/history/history.component';
 import { SettingsComponent } from './main/modules/settings/settings.component';
+import { NewQuestionComponent } from './main/modules/new-question/new-question.component';
 
 const APP_ROUTES: Routes = [
   {
@@ -47,6 +48,10 @@ const APP_ROUTES: Routes = [
       {
         path: 'useful',
         component: UsefulLinksComponent
+      },
+      {
+        path: 'new-question',
+        component: NewQuestionComponent
       }
     ]
   },

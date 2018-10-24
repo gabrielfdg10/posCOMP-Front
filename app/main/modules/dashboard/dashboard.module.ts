@@ -1,3 +1,4 @@
+import { NewQuestionModule } from './../new-question/new-question.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,7 +22,8 @@ import { HistoryModule } from '../history/history.module';
     TestModule,
     SettingsModule,
     HistoryModule,
-    UsefulLinksModule
+    NewQuestionModule,
+    UsefulLinksModule,
   ],
   declarations: [
     DashboardComponent

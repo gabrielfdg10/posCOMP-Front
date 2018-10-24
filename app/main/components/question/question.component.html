@@ -1,0 +1,66 @@
+<div class="question">
+  <div class="statement">
+    {{ question.statement }}
+  </div>
+  <div class="image">
+    <img [src]="question.url" alt="">
+  </div>
+  <div class="statement">
+    {{ question.second_statement }}
+  </div>
+  <div class="alternatives">
+    <mat-radio-group>
+      <mat-radio-button value="a">
+        <div class="alt">
+          <div class="special">
+            a.
+          </div>
+          <div class="alt-text">
+            {{ question.alt_a }}
+          </div>
+        </div>
+      </mat-radio-button>
+      <mat-radio-button value="b">
+        <div class="alt">
+          <div class="special">
+            b.
+          </div>
+          <div class="alt-text">
+            {{ question.alt_b }}
+          </div>
+        </div>
+      </mat-radio-button>
+      <mat-radio-button value="c">
+        <div class="alt">
+          <div class="special">
+            c.
+          </div>
+          <div class="alt-text">
+            {{ question.alt_c }}
+          </div>
+        </div>
+      </mat-radio-button>
+      <mat-radio-button value="d">
+        <div class="alt">
+          <div class="special">
+            d.
+          </div>
+          <div class="alt-text">
+            {{ question.alt_d }}
+          </div>
+        </div>
+      </mat-radio-button>
+      <mat-radio-button value="e">
+        <div class="alt">
+          <div class="special">
+            e.
+          </div>
+          <div class="alt-text">
+            {{ question.alt_e }}
+          </div>
+        </div>
+      </mat-radio-button>
+
+    </mat-radio-group>
+  </div>
+</div>

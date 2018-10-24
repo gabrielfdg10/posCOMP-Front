@@ -1,0 +1,13 @@
+<button (click)="prevPage()" class="prev">
+  prev
+</button>
+<div class="page">
+  {{ page }}
+</div>
+<button (click)="nextPage()" class="next">
+  next
+</button>
+
+<div *ngFor="let item of pagedArr">
+  {{ item }}
+</div>

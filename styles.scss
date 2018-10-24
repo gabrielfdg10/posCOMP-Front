@@ -69,3 +69,6 @@ input.mat-input-element {
     opacity: 0;
   }
 }
+
+@import 'node_modules/ngx-toastr/toastr.css';
+@import './app/main/styles/material.scss';

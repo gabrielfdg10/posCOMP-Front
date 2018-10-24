@@ -10,6 +10,7 @@ import { LoginScreenModule } from "./main/login-screen/login-screen.module";
 import { HttpService } from "./services/http.service";
 import { RegisterModule } from "./main/register/register.module";
 import { DashboardModule } from './main/modules/dashboard/dashboard.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,7 @@ import { DashboardModule } from './main/modules/dashboard/dashboard.module';
     LoginScreenModule,
     RegisterModule,
     DashboardModule,
-
+    ToastrModule.forRoot()
   ],
   exports: [],
   providers: [

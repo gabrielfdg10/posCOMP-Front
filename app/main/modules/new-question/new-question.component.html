@@ -1,0 +1,38 @@
+<div class="new-question">
+  <div class="form">
+    <mat-form-field class="item">
+      <textarea matInput placeholder="Primeiro enunciado" [(ngModel)]="question.statement" ></textarea>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <textarea matInput placeholder="Segundo enunciado" [(ngModel)]="question.second_statement"></textarea>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <textarea matInput placeholder="Alternativa a" [(ngModel)]="question.alt_a"></textarea>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <textarea matInput placeholder="Alternativa b" [(ngModel)]="question.alt_b"></textarea>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <textarea matInput placeholder="Alternativa c" [(ngModel)]="question.alt_c"></textarea>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <textarea matInput placeholder="Alternativa d" [(ngModel)]="question.alt_d"></textarea>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <textarea matInput placeholder="Alternativa e" [(ngModel)]="question.alt_e"></textarea>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <input matInput placeholder="Resposta" [(ngModel)]="question.answer">
+    </mat-form-field>
+    <mat-form-field class="item">
+      <input matInput placeholder="Identificador" [(ngModel)]="question.identifier">
+    </mat-form-field>
+    <mat-form-field class="item">
+      <input matInput placeholder="Categoria" [(ngModel)]="question.category">
+    </mat-form-field>
+  </div>
+  <div class="button-row">
+    <button mat-raised-button (click)="insert()">Inserir</button>
+  </div>
+
+</div>
