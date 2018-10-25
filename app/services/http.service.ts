@@ -21,9 +21,9 @@ export class HttpService {
     );
   }
   s;
-  getQuestionsByClass(c: string) {
+  getQuestionsByClass(c: string, i: number) {
     return this.http.get(
-      "http://localhost:60996/api/questions/getQuestionsByClass/" + c
+      "http://localhost:60996/api/questions/getQuestionsByClass/" + c + "/" + i
     );
   }
 
@@ -33,13 +33,13 @@ export class HttpService {
     );
   }
 
-  getRelationsByTestId(test_id: number){
+  getRelationsByTestId(test_id: number) {
     return this.http.get(
       "http://localhost:60996/api/qot/getRelationsByTestId/" + test_id
     );
   }
 
-  getRelationsByQuestionId(question_id: number){
+  getRelationsByQuestionId(question_id: number) {
     return this.http.get(
       "http://localhost:60996/api/qot/getRelationsByQuestionId/" + question_id
     );
@@ -78,21 +78,19 @@ export class HttpService {
   }
 
   postNewTest(test: Test) {
-    return this.http.post(
-      "http://localhost:60996/api/tests/newTest/",
-      test,
-      {
-        headers: new HttpHeaders({
-          "Content-Type": "application/json"
-        })
-      }
-    );
+    return this.http.post("http://localhost:60996/api/tests/newTest/", test, {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json"
+      })
+    });
   }
 
-  postNewRelation(test_id: number, question_id: number){
-    return this.http.post(
-      "http://localhost:60996/api/qot/newRelation/" + test_id + "/" + question_id, null
-    );
+  postNewRelation(qot: QuestionOnTest) {
+    console.log(qot);
+    return this.http.post("http://localhost:60996/api/qot/newRelation/", qot, {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json"
+      })
+    });
   }
-
 }

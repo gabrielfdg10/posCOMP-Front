@@ -7,6 +7,7 @@ import { FormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { ComponentsModule } from '../../components/components.module';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSelectModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    RouterModule
   ],
   declarations: [TestComponent]
 })

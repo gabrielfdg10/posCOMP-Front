@@ -1,6 +1,5 @@
 .question {
   width: 100%;
-  white-space: pre-wrap;
 
   ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
     background-color: grey;
@@ -20,18 +19,25 @@
     background-color: rgba(grey, 0.5);
   }
 
+  ::ng-deep .mat-radio-label{
+    white-space: unset;
+  }
+
   .mat-radio-button {
     width: 100%;
     padding-top: 20px;
   }
+
   .statement {
     width: 100%;
     font-size: 20px;
+    white-space: pre-wrap;
   }
   .image {
     width: 100%;
     img {
       max-height: 225px;
+      max-width: 450px;
       display: block;
       margin: auto;
     }
@@ -47,6 +53,8 @@
         font-size: 12px;
       }
       .alt-text {
+        margin-left: 15px;
+        overflow-wrap: break-word;
         padding-left: 10px;
         display: table-cell;
         font-size: 20px;

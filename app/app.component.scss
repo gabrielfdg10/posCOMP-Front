@@ -1,19 +1,5 @@
 
 
-// :host {
-//   display: flex;
-//   overflow: hidden;
-//   height: 100vh;
-//   main {
-//     position: relative;
-//   }
-//   /deep/ router-outlet ~ * {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//   }
-// }
-
 
 @import './main/login-screen/login-screen.component.scss';
 @import './main/register/register.component.scss';
