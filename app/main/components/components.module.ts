@@ -10,6 +10,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { QuestionComponent } from './question/question.component';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import {MatRadioModule} from '@angular/material/radio';
     RouterModule,
     ChartsModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     MenuTopBarComponent,

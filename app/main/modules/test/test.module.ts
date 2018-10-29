@@ -8,6 +8,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { ComponentsModule } from '../../components/components.module';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { RouterModule } from "@angular/router";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { RouterModule } from "@angular/router";
     MatInputModule,
     MatButtonModule,
     MatProgressBarModule,
-    RouterModule
+    RouterModule,
+    MatProgressSpinnerModule
   ],
   declarations: [TestComponent]
 })

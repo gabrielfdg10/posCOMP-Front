@@ -45,6 +45,12 @@ export class HttpService {
     );
   }
 
+  getUserStats(id: number) {
+    return this.http.get(
+      "http://localhost:60996/api/users/getUsersStats/" + id
+    );
+  }
+
   postNewUser(user: User) {
     return this.http.post("http://localhost:60996/api/users/newUser/", user, {
       headers: new HttpHeaders({

@@ -5,6 +5,17 @@
   justify-content: center;
   position: relative;
   //material
+
+  ::ng-deep .mat-spinner {
+    circle{
+      stroke: grey;
+    }
+  }
+
+  .mat-spinner{
+    position: absolute;
+    top: 35%;
+  }
   .mat-form-field {
     width: 100%;
     // padding-left: 5%;

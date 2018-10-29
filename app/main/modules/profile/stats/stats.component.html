@@ -3,7 +3,7 @@
     VISÃO GERAL DE GABRIEL
   </div>
   <!-- Graficos -->
-  <div class="chart-area">
+  <div class="chart-area" *ngIf="barChartData && pieChartData">
     <mat-tab-group mat-align-tabs="center">
       <mat-tab>
         <ng-template mat-tab-label>
@@ -23,7 +23,7 @@
           <img src="../../../../../assets/img/icons/performance.png" style="width: 24px; padding-right: 15px;">
           DESEMPENHO GERAL
         </ng-template>
-        <app-bar-chart> </app-bar-chart>
+        <app-bar-chart [barChartData]="barChartData"> </app-bar-chart>
       </mat-tab>
     </mat-tab-group>
     <div class="chart">
@@ -32,7 +32,7 @@
   </div>
 
   <!-- Estatísticas -->
-  <div class="stats-area">
+  <div class="stats-area" *ngIf="userStats">
     <div class="title">
     </div>
     <div class="fw math">
@@ -45,15 +45,15 @@
       <div class="data">
         <div class="item">
           <div class="label"> RESOLVIDAS: </div>
-          <div class="value"> 100 </div>
+          <div class="value"> {{userStats.math_ans}} </div>
         </div>
         <div class="item">
           <div class="label"> CORRETAS: </div>
-          <div class="value"> 51 </div>
+          <div class="value"> {{userStats.math_cor}} </div>
         </div>
         <div class="item">
           <div class="label"> ACURÁCIA: </div>
-          <div class="value"> 51% </div>
+          <div class="value"> {{precision.math}}%</div>
         </div>
       </div>
     </div>
@@ -66,15 +66,15 @@
       <div class="data">
         <div class="item">
           <div class="label"> RESOLVIDAS: </div>
-          <div class="value"> 84</div>
+          <div class="value"> {{userStats.tech_ans}}</div>
         </div>
         <div class="item">
           <div class="label"> CORRETAS: </div>
-          <div class="value"> 32</div>
+          <div class="value"> {{userStats.tech_cor}}</div>
         </div>
         <div class="item">
           <div class="label"> ACURÁCIA: </div>
-          <div class="value"> 38%</div>
+          <div class="value"> {{precision.tech}}%</div>
         </div>
       </div>
     </div>
@@ -87,15 +87,15 @@
       <div class="data">
         <div class="item">
           <div class="label"> RESOLVIDAS: </div>
-          <div class="value"> 63</div>
+          <div class="value"> {{userStats.fund_ans}}</div>
         </div>
         <div class="item">
           <div class="label"> CORRETAS: </div>
-          <div class="value"> 42</div>
+          <div class="value"> {{userStats.fund_cor}}</div>
         </div>
         <div class="item">
           <div class="label"> ACURÁCIA: </div>
-          <div class="value"> 66%</div>
+          <div class="value"> {{precision.fund}}%</div>
         </div>
       </div>
     </div>
@@ -108,15 +108,15 @@
       <div class="data">
         <div class="item">
           <div class="label"> TOTAL: </div>
-          <div class="value"> 63</div>
+          <div class="value"> {{userStats.test_made}}</div>
         </div>
         <div class="item">
           <div class="label"> ALEATÓRIOS: </div>
-          <div class="value"> 42</div>
+          <div class="value"> {{userStats.random_test}}</div>
         </div>
         <div class="item">
           <div class="label"> PERSONALIZADOS: </div>
-          <div class="value"> 21 <div>
+          <div class="value"> {{userStats.custom_test}} <div>
             </div>
           </div>
         </div>

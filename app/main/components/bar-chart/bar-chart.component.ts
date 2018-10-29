@@ -16,11 +16,7 @@ export class BarChartComponent implements OnInit {
   @Input()
   barChartLabels: string[] = ["Matemática", "Tecnologias", "Fundamentos"];
   @Input()
-  barChartData: any[] = [
-    { data: [100, 84, 63], label: "Total de questões" },
-    { data: [51, 32, 42], label: "Respostas corretas" },
-    { data: [49, 51, 21], label: "Respostas erradas" }
-  ];
+  barChartData: any;
 
   constructor() {}
 
@@ -31,12 +27,6 @@ export class BarChartComponent implements OnInit {
     if (this.barChartLabels === undefined || this.barChartLabels === []) {
       this.barChartLabels = ["Matemática", "Tecnologias", "Fundamentos"];
     }
-    if (this.barChartData === undefined || this.barChartData === []) {
-      this.barChartData = [
-        { data: [100, 84, 63], label: "Total de questões" },
-        { data: [51, 32, 42], label: "Respostas corretas" },
-        { data: [49, 51, 21], label: "Respostas erradas" }
-      ];
-    }
+
   }
 }

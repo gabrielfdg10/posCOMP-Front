@@ -39,7 +39,8 @@
   </div>
 
   <!-- TESTE -->
-  <div class="do-test fade-in" *ngIf="canMakeTest && !finishedTest">
+  <mat-spinner *ngIf="loadingTest"> </mat-spinner>
+  <div class="do-test fade-in" *ngIf="canMakeTest && !finishedTest && !loadingTest">
     <div class="test-info">
       <div class="progress-bar">
         <mat-progress-bar mode="determinate" [value]="testProgress"></mat-progress-bar>
@@ -49,7 +50,7 @@
       </div>
     </div>
     <div *ngIf="this.answered !== this.nQuestions" class="question-area fade-in">
-      <app-question *ngIf="!loadingTest" [question]="currentQuestion" (changedAlternative)="changedAlternative($event)"></app-question>
+      <app-question [question]="currentQuestion" (changedAlternative)="changedAlternative($event)"></app-question>
       <div class="button-row">
         <button mat-raised-button (click)="skipQuestion()" class="clear">Pular Questão <img src="../../../../assets/img/icons/skip.png"
             alt=""> </button>

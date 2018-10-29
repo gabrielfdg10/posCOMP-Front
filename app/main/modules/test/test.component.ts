@@ -97,7 +97,7 @@ export class TestComponent implements OnInit {
       this.score++;
     }
     this.testResults.push({
-      id: this.currentQuestion.id, correct: correct
+      id: this.currentQuestion.id, correct: correct, question_type: this.currentQuestion.category
     });
     this.makeQuestion();
     this.testProgress = (this.currentIndex / this.nQuestions) * 100;
@@ -180,6 +180,7 @@ export class TestComponent implements OnInit {
     this.httpService
       .getQuestionsByClass("math", mathNumber)
       .subscribe((response: any) => {
+        console.log(response);
         response.forEach(element => {
           this.questionsToGo.push(element);
         });
@@ -225,7 +226,7 @@ export class TestComponent implements OnInit {
       (response: number) => {
         testId = response;
         this.testResults.forEach(element => {
-          this.httpService.postNewRelation(new QuestionOnTest(testId, element.id, element.correct)).subscribe(
+          this.httpService.postNewRelation(new QuestionOnTest(testId, element.id, element.correct, element.question_type)).subscribe(
             (response) => {
               console.log(response);
             }
