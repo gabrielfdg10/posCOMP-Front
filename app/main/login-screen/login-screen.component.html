@@ -1,21 +1,32 @@
-<div class="bg">
+<div class="bg" [ngStyle]="{ 'background-image': 'url(' + imageLink + ')'}">
   <div class="login-screen">
-    <div class="login-form-field fade-in" >
+    <div class="login-form-field fade-in">
+      <div class="conquestion-image">
+        <img src="../../../assets/img/logo_down.png" alt="">
+      </div>
       <div class="welcome-label">
         <span>
           Bem-vindo de volta!
         </span>
       </div>
+      <div class="welcome-text">
+        <span>
+            Entre com suas credenciais e continue estudando com a maior plataforma de estudos para a POSCOMP disponível na
+            Web!
+        </span>
+      </div>
       <div class="login-form">
 
+        <div class="input-label"> Nome de usuário*</div>
         <mat-form-field class="full-width">
-          <span class="input-label"> Nome de usuário*</span>
           <input matInput [(ngModel)]="username" value="">
         </mat-form-field>
 
+        <div class="input-label"> Senha* </div>
         <mat-form-field class="full-width">
-          <span class="input-label"> Senha*</span>
-          <input matInput type="password" [(ngModel)]="password" value="">
+          <input matInput [type]="pwVisible? 'text': 'password'" [(ngModel)]="password" value="">
+          <mat-icon *ngIf="!pwVisible" (click)="pwVisible = !pwVisible" matSuffix> visibility</mat-icon>
+          <mat-icon *ngIf="pwVisible" (click)="pwVisible = !pwVisible" matSuffix> visibility_off</mat-icon>
         </mat-form-field>
         <div class="button-row">
           Novo por aqui? <a routerLink="/register" routerLinkActive="active">Cadastrar</a>
@@ -23,6 +34,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="fill">
+
   </div>
 
 </div>

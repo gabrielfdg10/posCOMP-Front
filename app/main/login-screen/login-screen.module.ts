@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { HttpService } from '../../services/http.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   imports: [
     CommonModule,
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatInputModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   declarations: [
     LoginScreenComponent,

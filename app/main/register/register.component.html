@@ -1,7 +1,15 @@
-<div class="register">
+<div class="register" [ngStyle]="{ 'background-image': 'url(' + imageLink + ')'}">
   <div class="panel fade-in">
-    <h3>Faça parte da nossa comunidade!</h3>
-
+    <div class="be-part">
+      <span>
+        Faça parte da nossa comunidade!
+      </span>
+    </div>
+    <div class="be-part-text">
+      <span>
+        O cadastro é rápido e seus dados jamais serão compartilhados. Venha estudar conosco!
+      </span>
+    </div>
     <div class="register-form">
       <mat-form-field *ngFor="let item of register_fields">
         <span class="input-label">
@@ -15,7 +23,7 @@
         </mat-select>
       </mat-form-field>
       <div class="button-row">
-        <button mat-raised-button>PROSSEGUIR
+        <button mat-stroked-button>Prosseguir
         </button>
       </div>
     </div>

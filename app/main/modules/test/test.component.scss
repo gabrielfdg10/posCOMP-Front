@@ -1,21 +1,7 @@
 .test {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
   //material
-
-  ::ng-deep .mat-spinner {
-    circle{
-      stroke: grey;
-    }
-  }
-
-  .mat-spinner{
-    position: absolute;
-    top: 35%;
-  }
   .mat-form-field {
     width: 100%;
     // padding-left: 5%;
@@ -118,46 +104,28 @@
       width: 60%;
       position: absolute;
       top: 18%;
-    }
-  }
-  .button-row {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    .mat-raised-button {
-      height: 40px;
-      width: 200px;
-      &.clear {
-        background-color: white;
-        img {
-          width: 15px;
+      .button-row {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .mat-raised-button {
+          height: 40px;
+          width: 200px;
+          &.clear {
+            background-color: white;
+            img {
+              width: 15px;
+            }
+          }
+          &.confirm {
+            background-color: #76dc14;
+            margin-left: 15px;
+            img {
+              width: 20px;
+            }
+          }
         }
       }
-      &.confirm {
-        background-color: #76dc14;
-        margin-left: 15px;
-        img {
-          width: 20px;
-        }
-      }
-    }
-  }
-
-  .results {
-    text-align: center;
-    width: 60%;
-    .title {
-      font-size: 32px;
-      font-weight: bold;
-      padding-top: 10%;
-    }
-    .hello-text {
-      font-size: 24px;
-      padding-top: 2%;
-    }
-    .chart {
-      width: 60%;
-      padding-left: 20%;
     }
   }
 }

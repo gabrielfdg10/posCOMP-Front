@@ -10,7 +10,6 @@ export class Test {
   public fund_correct_answers: number;
   public tech_correct_answers: number;
   public accuracy: number;
-  public type: string;
 
   constructor(
     user_id: number,
@@ -23,8 +22,7 @@ export class Test {
     math_correct_answers: number,
     fund_correct_answers: number,
     tech_correct_answers: number,
-    accuracy: number,
-    type: string
+    accuracy: number
   ) {
     this.user_id = user_id;
     this.id = id;
@@ -37,8 +35,5 @@ export class Test {
     this.fund_correct_answers = fund_correct_answers;
     this.tech_correct_answers = tech_correct_answers;
     this.accuracy = accuracy;
-    this.type = type;
   }
-
-
 }

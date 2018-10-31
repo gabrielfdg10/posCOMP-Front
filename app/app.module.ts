@@ -11,7 +11,6 @@ import { HttpService } from "./services/http.service";
 import { RegisterModule } from "./main/register/register.module";
 import { DashboardModule } from './main/modules/dashboard/dashboard.module';
 import { ToastrModule } from 'ngx-toastr';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +21,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     LoginScreenModule,
     RegisterModule,
     DashboardModule,
-    MatProgressSpinnerModule,
     ToastrModule.forRoot()
   ],
   exports: [],

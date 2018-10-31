@@ -1,5 +1,5 @@
-<div class="question fade-in" *ngIf="question">
-  <div class="statement fade-in">
+<div class="question">
+  <div class="statement">
     {{ question.statement }}
   </div>
   <div class="image">
@@ -9,7 +9,7 @@
     {{ question.second_statement }}
   </div>
   <div class="alternatives">
-    <mat-radio-group (change)="valueChanged($event)" [(ngModel)]="currentAlternative">
+    <mat-radio-group>
       <mat-radio-button value="a">
         <div class="alt">
           <div class="special">
@@ -63,8 +63,4 @@
 
     </mat-radio-group>
   </div>
-</div>
-<div *ngIf="!question" class="spinner">
-  <mat-progress-spinner >
-  </mat-progress-spinner>
 </div>

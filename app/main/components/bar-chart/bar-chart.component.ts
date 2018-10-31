@@ -13,10 +13,8 @@ export class BarChartComponent implements OnInit {
   public barChartType: string = "bar";
   public barChartLegend: boolean = true;
   public loading: boolean = true;
-  @Input()
-  barChartLabels: string[] = ["Matemática", "Tecnologias", "Fundamentos"];
-  @Input()
-  barChartData: any;
+  @Input() barChartLabels: string[] = ["Matemática", "Tecnologias", "Fundamentos"];
+  @Input() barChartData: any;
 
   constructor() {}
 
@@ -27,6 +25,5 @@ export class BarChartComponent implements OnInit {
     if (this.barChartLabels === undefined || this.barChartLabels === []) {
       this.barChartLabels = ["Matemática", "Tecnologias", "Fundamentos"];
     }
-
   }
 }

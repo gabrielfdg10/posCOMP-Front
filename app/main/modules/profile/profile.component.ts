@@ -1,3 +1,4 @@
+import { AuthService } from './../../../services/auth.service';
 import { StatsComponent } from './stats/stats.component';
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    this.authService.logIn('gabrielfdg10', 'gfdg12081997');
   }
 
 }

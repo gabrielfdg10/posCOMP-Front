@@ -39,47 +39,20 @@
   </div>
 
   <!-- TESTE -->
-  <mat-spinner *ngIf="loadingTest"> </mat-spinner>
-  <div class="do-test fade-in" *ngIf="canMakeTest && !finishedTest && !loadingTest">
+  <div class="do-test fade-in" *ngIf="canMakeTest">
     <div class="test-info">
       <div class="progress-bar">
         <mat-progress-bar mode="determinate" [value]="testProgress"></mat-progress-bar>
         <div class="progress-text"> você já respondeu {{ answered }} de {{ nQuestions }} questões</div>
-        <div class="current-question" *ngIf="currentQuestion"> Questão {{ questionNumber }} - Ano {{ questionYear }} -
-          {{ questionClass}}</div>
+        <div class="current-question"> Questão {{ questionNumber }} - Ano {{ questionYear }} - {{ questionClass}}</div>
       </div>
     </div>
-    <div *ngIf="this.answered !== this.nQuestions" class="question-area fade-in">
-      <app-question [question]="currentQuestion" (changedAlternative)="changedAlternative($event)"></app-question>
+    <div class="question-area fade-in">
+      <app-question [question]="questionToGo"></app-question>
       <div class="button-row">
-        <button mat-raised-button (click)="skipQuestion()" class="clear">Pular Questão <img src="../../../../assets/img/icons/skip.png"
-            alt=""> </button>
-        <button mat-raised-button (click)="confirmAnswer()" class="confirm" [disabled]="!selectedAlternative || selectedAlternative === ''">Confirmar
-          Resposta <img *ngIf="selectedAlternative !== ''" src="../../../../assets/img/icons/correct.png" alt=""></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- RESULTADOS -->
-
-  <div class="results fade-in" *ngIf="finishedTest">
-    <div class="title">
-      Resultados
-    </div>
-    <div class="hello-text">
-      Olá, {{ username }}. Trouxemos alguns resultados do seu simulado.
-    </div>
-    <div class="chart">
-      <app-bar-chart [barChartData]="barChartData" [barChartLabels]="barChartLabels"> </app-bar-chart>
-    </div>
-    <div class="hello-text">
-      Boa sorte no próximo simulado, e bons estudos!
-    </div>
-    <div class="button-row">
-      <button mat-raised-button class="clear" (click)="goToHome()"> <img src="../../../../assets/img/icons/exit.png"
-          alt=""> Página inicial </button>
-      <button mat-raised-button class="confirm" (click)="resetTest()"><img src="../../../../assets/img/icons/repeat.png"
-          alt=""> Fazer outro simulado</button>
+          <button mat-raised-button (click)="skipQuestion()" class="clear">Pular Questão <img src="../../../../assets/img/icons/skip.png" alt=""> </button>
+          <button mat-raised-button (click)="confirmAnswer()" class="confirm">Confirmar Resposta <img src="../../../../assets/img/icons/correct.png" alt=""></button>
+        </div>
     </div>
   </div>
 

@@ -1,10 +1,3 @@
-.app{
-  min-width: 1280px;
-  min-height: 720px;
-  overflow-x: scroll;
-  overflow-y: scroll;
-}
 
-
-@import './main/login-screen/login-screen.component.scss';
-@import './main/register/register.component.scss';
+@import "./main/login-screen/login-screen.component.scss";
+@import "./main/register/register.component.scss";

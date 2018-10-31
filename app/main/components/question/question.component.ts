@@ -1,28 +1,18 @@
-import { Component, OnInit, Input, EventEmitter, Output, OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss']
 })
-export class QuestionComponent implements OnInit, OnChanges{
+export class QuestionComponent implements OnInit {
 
-  @Input() question: any;
-  @Output() changedAlternative = new EventEmitter();
-  public currentAlternative: string = '';
+  @Input() question = {};
+
   constructor() { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges(changes: SimpleChanges){
-    if( changes.question){
-      this.currentAlternative = null
-    }
-  }
-
-  valueChanged(e: any){
-    this.changedAlternative.emit(e.value);
+    console.log(this.question);
   }
 
 }

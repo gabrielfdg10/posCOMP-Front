@@ -3,8 +3,6 @@
   width: 100%;
   height: 100%;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
   .container{
     background-color: #fff;
     height: 87%;
@@ -12,6 +10,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     margin-top: 1%;
+    display: inline-block;
     float: right;
     margin-right: 1%;
     border-radius: 10px;

@@ -20,6 +20,8 @@ export class RegisterComponent implements OnInit {
     real_name: '',
     institution: ''
   }
+  public imageLink: string = "../../../assets/img/bg.jpg";
+
   ngOnInit() {
   }
 
